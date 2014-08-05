@@ -11,7 +11,13 @@ Un tutorial inspirado en ruby koans para php
 3. Correr `composer install`
 4. Correr en apache con php. Ejemplo: http://localhost/PHPKoans
 
-## Instalación (para contribuir)
+## Uso
+
+1. Instalar.
+2. Editar sólamente el archivo respuestas.php
+3. Hacer que todos los tests pasen.
+
+## Instalacion (Para contribuir)
 
 1.  Forkear el repositorio. 
 2.  Clonar tu Fork
@@ -22,6 +28,7 @@ Un tutorial inspirado en ruby koans para php
 7.  Al hacer cambios pushear al fork.
 8.  Para recibir cambios del original hacer pull al upstream.
 9.  Para proponer cambios al repositorio hacer pull request.
+
 
 ## Ideas para resolver problemas
 
