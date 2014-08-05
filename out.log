@@ -1,0 +1,67 @@
+PHPUnit 4.1.3-7-gf106c8d by Sebastian Bergmann.
+
+FF.FFFF.....FFF
+
+Time: 50 ms, Memory: 4.25Mb
+
+There were 9 failures:
+
+1) Warning
+No tests found in class "testBase".
+
+2) ArreglosTest::testLargoDeUnArreglo
+Ese no es el largo. Cual es el largo del arreglo?
+Failed asserting that '__LLENAR__' matches expected 3.
+
+/private/var/www/estudiakoans/tests/arreglosTest.php:18
+
+3) ArreglosTest::testCrearTablero
+La funcion crearTablero() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/arreglosTest.php:43
+
+4) ArreglosTest::testContarTablero
+La funcion contarTablero() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/arreglosTest.php:71
+
+5) ArreglosTest::testReversar
+La funcion reversar() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/arreglosTest.php:89
+
+6) ArreglosTest::testNumeroPrimo
+La funcion esPrimo() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/arreglosTest.php:107
+
+7) EjemplosTest::testTutorial6
+La funcion tutorial6() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/ejemplosTest.php:93
+
+8) FuncionesTest::testOperadorConcatenador
+La funcion concatenarY() no ha sido creada.
+Failed asserting that false is true.
+
+/private/var/www/estudiakoans/helper/testBase.php:14
+/private/var/www/estudiakoans/tests/operadoresTest.php:17
+
+9) FuncionesTest::testComparador
+La función retorno una respuesta incorrecta.
+Failed asserting that '105' matches expected 0.
+
+/private/var/www/estudiakoans/tests/operadoresTest.php:30
+
+FAILURES!
+Tests: 15, Assertions: 33, Failures: 9.

@@ -1,0 +1,17 @@
+{
+    "name": "adepti/estudiaton",
+    "description": "Ejercicios para aprender php",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jose Merino",
+            "email": "jomerinog@gmail.com"
+        }
+    ],
+
+    "require": {
+        "phpunit/phpunit": "4.1.*",
+        "doctrine/common": "*"
+    }
+}
