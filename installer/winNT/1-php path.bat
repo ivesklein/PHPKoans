@@ -13,7 +13,7 @@ EXIT /B
 
 :OK
 REM Your code starts here!
-C:\modpath.exe /add C:\xampp\php
+modpath.exe /add C:\xampp\php
 ECHO.
 ECHO. --- VARIABLE GLOBAL AGREGADA ---
 PAUSE>NUL

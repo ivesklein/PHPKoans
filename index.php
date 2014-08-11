@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 ob_start();
 require 'vendor/autoload.php';
 require 'respuestas/respuestas.php';
@@ -12,10 +13,11 @@ $suite  = new PHPUnit_Framework_TestSuite("StringTest");
 $output = "";
 $metadatos = getMetadatosKoan();
 $outval=1;
-exec('php vendor/bin/phpunit --verbose --log-json result.json tests/ > out.log',$outval);
+exec('"vendor/bin/phpunit" --verbose --log-json result.json tests/ > out.log',$outval);
 
 $fixed = '['.str_replace('}{','},{',file_get_contents("result.json")).']';
-$results = json_decode('['.str_replace('}{','},{',file_get_contents("result.json")).']',true);
+$results = json_decode(  '['.str_replace('}{','},{',file_get_contents("result.json")).']'  ,true);
+
 $secciones = array();
 $count = 1000;
 $seccionindex=0;
@@ -28,7 +30,11 @@ $annotationReader = new AnnotationReader();
  * Primer procesamiento de resultados de tests.
  * Se guardarán a un arreglo (secciones)
  */
+
+
 foreach ($results as $result) {
+
+
     // Si hay meta datos para el nombre del testSuite
     if(isset($metadatos[$result["suite"]])){
         // Y aun no está creada su seccion en el arreglo
@@ -51,6 +57,9 @@ foreach ($results as $result) {
     }else{
         continue;
     }
+
+
+    
     if($result["event"]=="suiteStart"){
         $secciones[$result["suite"]]["tests"]=0;
         $secciones[$result["suite"]]["listos"]=0;
@@ -86,6 +95,7 @@ foreach ($results as $result) {
         }
     }
 }
+
 
 usort($secciones,'ordenador');
 $out = ob_get_clean();
@@ -134,6 +144,8 @@ foreach($secciones as $key=>$seccion){
 
     $temaindex++;
 }
+
+
 $jsonInfo=array("hechos"=>$hechos,"ultimoEjercicio"=>$ultimoEjercicio,"puntos"=>$puntos);
 $jsonInfo=json_encode($jsonInfo);
 $filradasJson = json_encode($seccionesFiltradas);
