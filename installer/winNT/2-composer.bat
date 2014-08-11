@@ -13,7 +13,9 @@ EXIT /B
 
 :OK
 REM Your code starts here!
+cd C:\xampp\htdocs\PHPKoans
 php -r "readfile('https://getcomposer.org/installer');" | php
+php composer.phar install
 ECHO.
 ECHO. COMPOSER INSTALADO NOSE DONDE.
 PAUSE>NUL
